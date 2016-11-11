@@ -22,7 +22,7 @@ var geojsonFeature = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [-73.9738, 40.7624]}
-        }
+        },
 	    	{"type": "Feature",
             "properties": {
                 "Myname": "Zombie-Franck",
@@ -33,7 +33,7 @@ var geojsonFeature = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [-73.87705, 40.71318]}
-        }
+        },
 	{"type": "Feature",
             "properties": {
                 "Myname": "Boris Skolovich",
@@ -44,7 +44,7 @@ var geojsonFeature = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [-73.904899, 40.692798]}
-        }
+        },
 	{"type": "Feature",
             "properties": {
                 "Myname": "Mary Brainfield",
@@ -55,7 +55,7 @@ var geojsonFeature = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [-74.017330, 40.690085]}
-        }
+        },
 {"type": "Feature",
             "properties": {
                 "Myname": "Zombie-Rick",
@@ -66,7 +66,7 @@ var geojsonFeature = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [-73.935940, 40.731205]}
-        }
+        },
 	{"type": "Feature",
             "properties": {
                 "Myname": "B. Murray",
@@ -77,7 +77,7 @@ var geojsonFeature = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [-73.966611, 40.714877]}
-        }
+        },
 {"type": "Feature",
             "properties": {
                 "Myname": "Lucielle Ball",
@@ -88,7 +88,7 @@ var geojsonFeature = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [-73.9825, 40.7683]}
-        }
+        },
 	{"type": "Feature",
             "properties": {
                 "Myname": "E. Hungry",
@@ -99,7 +99,7 @@ var geojsonFeature = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [-74.0059410, 40.7127840]}
-        }
+        },
 {"type": "Feature",
             "properties": {
                 "Myname": "Charles",
