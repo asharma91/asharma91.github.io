@@ -18,26 +18,26 @@ var myPoints = L.geoJson(geojsonFeature, {
 //var marker2 = L.marker([40.719189, -73.996589]).addTo(map)
 //marker.bindPopup("<b>G.Rider</b><br><b>Favorite Food:</b> Fresh Souls</br><b>Favorite Song:</b> Free Bird</br><b>Favorite Movie:</b> The Jerk</br><b>Favorite Hobby:</b> Poppin-Wheelies!").openPopup();
 
-var povertyStyle = function (feature){
-    var value = feature.properties.PovertyPer;
+var unemploymentStyle = function (feature){
+    var value = feature.properties.UnempRate;
     var fillColor = null;
-    if(value >= 0 && value <=0.1){
-		fillColor = "#fee5d9";
+    if(value >= 0 && value <=0.025){
+		fillColor = "#4dac26";
     }
-    if(value >0.1 && value <=0.15){
-        fillColor = "#fcbba1";
+    if(value >0.02 && value <=0.05){
+        fillColor = "#a6d96a";
     }
-    if(value >0.15 && value<=0.2){
-    	fillColor = "#fc9272";
+    if(value >0.05 && value<=0.075){
+    	fillColor = "#fc8d59";
     }
-    if(value > 0.2 && value <=0.3){
-    	fillColor = "#fb6a4a";
+    if(value > 0.075 && value <=0.10){
+    	fillColor = "#e34a33";
     }
-    if(value > 0.3 && value <=0.4) { 
-		fillColor = "#de2d26";
+    if(value > 0.10 && value <=0.125) { 
+		fillColor = "#e6550d";
     }
-    if(value > 0.4) { 
-		fillColor = "#a50f15";
+    if(value > 0.125) { 
+		fillColor = "#b30000";
     }
 
     var style = {
@@ -50,15 +50,15 @@ var povertyStyle = function (feature){
 
     return style;
 }
-var povertyClick = function (feature, layer) {
-	var percent = feature.properties.PovertyPer * 100;
+var unemploymentClick = function (feature, layer) {
+	var percent = feature.properties.UnempRate * 100;
 	percent = percent.toFixed(0);
 	// let's bind some feature properties to a pop up
-	layer.bindPopup("<strong>Neighborhood:</strong> " + feature.properties.NYC_NEIG + "<br /><strong>Percent in Poverty: </strong>" + percent + "%");
+	layer.bindPopup("<strong>Neighborhood:</strong> " + feature.properties.NYC_NEIG + "<br /><strong>Unemployment Rate: </strong>" + percent + "%");
 }
 var neighborhoodsGeoJSON = L.geoJson(neighborhoods, {
-    style: povertyStyle,
-    onEachFeature: povertyClick
+    style: unemploymentStyle,
+    onEachFeature: unemploymentClick
 }).addTo(map);
 
 var baseMaps = {
@@ -67,7 +67,7 @@ var baseMaps = {
 
 var overlayMaps = {
     "Zombie Map": myPoints,
-    "Poverty Map": neighborhoodsGeoJSON
+    "Unemployment Map": neighborhoodsGeoJSON
 };
 
 L.control.layers(baseMaps, overlayMaps).addTo(map);
