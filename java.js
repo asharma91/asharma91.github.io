@@ -121,3 +121,4 @@ for (var i = 0; i < amounts.length; i++) {
   return div;
 };
 legend.addTo(map);
+
